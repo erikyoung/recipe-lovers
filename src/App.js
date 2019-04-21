@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navbar from './components/Navbar'; 
 import Home from './pages/Home'; 
 import Default from './pages/Default'; 
 import Recipes from './pages/Recipes'; 
@@ -11,9 +12,11 @@ class App extends Component {
   render() {
     return (
 
+      
       <Router>
+
         <main>
-          {/* navbar */}
+         <Navbar />
           <Switch>
              <Route path="/" exact component={Home} />
              <Route path="/recipes" component={Recipes} />
