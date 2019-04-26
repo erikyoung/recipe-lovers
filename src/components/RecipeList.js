@@ -25,7 +25,7 @@ export default class RecipeList extends Component {
       		<Recipe key={recipe.recipe_id} recipe={recipe} />
       		))}
       	</div>
-      Welcome to the RecipeList
+      		Welcome to the RecipeList
       
       </div>
     );
