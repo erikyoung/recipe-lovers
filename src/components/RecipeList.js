@@ -14,6 +14,7 @@ export default class RecipeList extends Component {
 
 
     return (
+    	<>
       <div className="container py-5">
       	<div className="row">
       		<div className="col-10 mx-auto col-md-6 text-center text-uppercase mb-3">
@@ -25,9 +26,10 @@ export default class RecipeList extends Component {
       		<Recipe key={recipe.recipe_id} recipe={recipe} />
       		))}
       	</div>
-      		Welcome to the RecipeList
+      		
       
       </div>
+      </>
     );
   }
 }
