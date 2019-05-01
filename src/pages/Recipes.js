@@ -18,7 +18,11 @@ state = {
 	recipes: recipeData, 
 	search:'', 
     url: `https://www.food2fork.com/api/search?key=${
-        process.env.REACT_APP_APP_API_KEY}`
+        process.env.REACT_APP_APP_API_KEY}`, 
+    base_url: `https://www.food2fork.com/api/search?key=${
+        process.env.REACT_APP_APP_API_KEY}`, 
+        query: '&q=', 
+        error: ''
 }; 
 
 async getRecipes() {
@@ -47,8 +51,13 @@ handleChange = (event) => {
 
 handleSubmit = (event) => {
 	event.preventDefault(); 
+    const {base_url, query, search} = this.state; 
+    this.setState({
+        url: `${base_url}${query}${search}`, 
+        search: ''
+    }, () => this.getRecipes())
 
-}
+}; 
 
 
   render() {
